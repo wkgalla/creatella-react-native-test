@@ -13,17 +13,18 @@ import {
   FlatList
 } from 'react-native';
 import styles from './styles'
+import AdCard from "../../containers/AdCard";
 
 const ProductsGrid = ({ products, loadProducts }) => {
   return (
     <FlatList
-        data={products}
-        renderItem={({ item, index }) => <ProductCard index={index}/>}
-        keyExtractor={item => item.id}
-        numColumns={2}
-        onEndReached={loadProducts}
-        onEndReachedThreshold={0.05}
-        ListFooterComponent={LoadingStatus}
+      data={products}
+      renderItem={({ item, index }) => item.isAd ? <AdCard adIndex={item.adIndex}/> : <ProductCard index={item.prodIndex}/>}
+      keyExtractor={item => item.id}
+      numColumns={2}
+      onEndReached={loadProducts}
+      onEndReachedThreshold={0.05}
+      ListFooterComponent={LoadingStatus}
     />
   );
 };

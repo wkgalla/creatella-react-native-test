@@ -29,17 +29,18 @@ const formatDate = (date) => {
 
 const ProductCard = ({item}) => {
   return (
-    <View style={styles.item}>
-      <Card>
-        <Card.Content>
+    <View style={styles.container}>
+      <Card style={styles.card} elevation={3}>
+        <View style={styles.cardContent}>
           <Title style={[styles.face, { fontSize: item.size}]}>{item.face}</Title>
           <Divider/>
           <Caption>{formatDate(item.date)}</Caption>
-          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
             <Paragraph>Size {item.size}</Paragraph>
             <Subheading style={styles.price}>${item.price}</Subheading>
           </View>
-        </Card.Content>
+          <Caption style={{marginTop: 'auto'}}>{item.id}</Caption>
+        </View>
       </Card>
     </View>
   );
