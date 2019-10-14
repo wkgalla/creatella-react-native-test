@@ -38,7 +38,9 @@ FAQ
 
 ### How do I start the app?
 
-Start with `npm start`. The server will look for any files you add to the `public/` directory.
+Start with `npm run start-server` to start the server.
+`expo start` to start expo server. Press `i` for iOS simulator and `a` for android emulator.
+To fetch data from localhost:3000 server from android, run `adb reverse tcp:3000 tcp:3000` in terminal.
 
 ### What libraries/frameworks, packages, tools can I use?
 
