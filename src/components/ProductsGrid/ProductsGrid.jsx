@@ -25,6 +25,7 @@ const ProductsGrid = ({ products, loadProducts }) => {
       onEndReached={loadProducts}
       onEndReachedThreshold={0.05}
       ListFooterComponent={LoadingStatus}
+      ListFooterComponentStyle={{paddingVertical: 20, alignItems: 'center'}}
     />
   );
 };

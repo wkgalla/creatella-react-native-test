@@ -10,10 +10,10 @@ export default function App() {
   return (
     <StoreProvider store={store}>
       <PaperProvider>
-        <SafeAreaView>
-          <Header/>
-          <ProductsGrid/>
-        </SafeAreaView>
+        <SafeAreaView/>
+        <Header/>
+        <ProductsGrid/>
+        <SafeAreaView/>
       </PaperProvider>
     </StoreProvider>
   );

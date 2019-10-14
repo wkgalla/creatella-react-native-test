@@ -32,7 +32,9 @@ const ProductCard = ({item}) => {
     <View style={styles.container}>
       <Card style={styles.card} elevation={3}>
         <View style={styles.cardContent}>
-          <Title style={[styles.face, { fontSize: item.size}]}>{item.face}</Title>
+          <View style={styles.faceContainer}>
+            <Title style={{ fontSize: item.size}}>{item.face}</Title>
+          </View>
           <Divider/>
           <Caption>{formatDate(item.date)}</Caption>
           <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
