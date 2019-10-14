@@ -11,8 +11,7 @@ const Header = () => {
     <Appbar.Header>
       <Appbar.Action icon="menu"/>
       <Appbar.Content
-        title="Faces"
-        subtitle="All"
+        title="Products"
       />
       <Menu
         visible={isMenuOpen}
@@ -20,7 +19,7 @@ const Header = () => {
         anchor={
           <Appbar.Action
             icon="more-vert"
-            color="white"
+            color="black"
             onPress={openMenu}
           />
         }

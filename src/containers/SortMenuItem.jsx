@@ -7,6 +7,7 @@ const SortMenuItemContainer = ({isActive, changeSortOption, value, title, dismis
   const onSortItemPress = () => {
     if(isActive) {
       dismissMenu();
+      return;
     }
     changeSortOption(value);
     dismissMenu();
